@@ -1,1 +1,21 @@
+.section {
+	padding: 2em 0;
+}
 
+.menu {
+	li {
+		@extend .nav-item;
+		border-bottom: solid 1px rgba(0,0,0,0.1);
+
+		a {
+			display: block;
+			@extend .nav-link;
+			padding: 0.5em 0;
+			
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}

@@ -1,8 +1,10 @@
+
 @import "common/variables";
+@import "components/fonts";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
 @import "common/global";

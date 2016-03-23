@@ -26,8 +26,14 @@ function setup() {
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
-  register_nav_menus([
+   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage')
+  ]);
+  register_nav_menus([
+    'se-deplacer' => __('Se déplacer', 'sage')
+  ]);
+  register_nav_menus([
+    'bgv' => __('Bretagne Grnage Vitesse', 'sage')
   ]);
 
   // Enable post thumbnails
