@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bfbe7919fe945fba9fdd4db9207c48d0",
-    "content-hash": "5c8fd896e915bb3e423a2dc4cf785d57",
+    "hash": "dd0d8d7a1edeb98b2fcb2e6d1562db3f",
+    "content-hash": "bebfe2be10666fb0d118c591e32a4610",
     "packages": [
         {
             "name": "composer/installers",
@@ -401,6 +401,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/knight-lab-timelinejs",
+            "version": "3.3.14.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/knight-lab-timelinejs/",
+                "reference": "tags/3.3.14.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/knight-lab-timelinejs.3.3.14.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/knight-lab-timelinejs/"
         },
         {
             "name": "wpackagist-plugin/types",

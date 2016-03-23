@@ -31,8 +31,7 @@
 	</div>
 </div>
 
-<hr>
-<div class="section">
+<div class="rubrique">
 	<h2>Se déplacer</h2>
 	<div class="row">
 		<div class="col-md-8">
@@ -46,9 +45,7 @@
 	</div>
 </div>
 
-<hr>
-
-<div class="section">
+<div class="rubrique">
 	<h2>Bretagne Grand Vitesse</h2>
 	<div class="row">
 		<?php if (has_nav_menu('bgv')) : ?>
@@ -61,5 +58,3 @@
 		</div>
 	</div>
 </div>
-
-<hr>

@@ -1,21 +1,47 @@
+.wrap {
+	min-height: 80vh;
+}
 .section {
 	padding: 2em 0;
 }
 
 .menu {
-	li {
+	.menu-item {
 		@extend .nav-item;
 		border-bottom: solid 1px rgba(0,0,0,0.1);
+		margin-top: 0 !important;
 
 		a {
 			display: block;
 			@extend .nav-link;
 			padding: 0.5em 0;
-			
+			color: $body-color;
+			&:hover, &:focus {
+				color: $brand-primary;
+			}
 		}
 
 		&:last-child {
 			border-bottom: none;
 		}
+
+		&.active {
+			background: $body-background;
+			a {
+				padding-left: 0.5em;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.rubrique {
+	min-height: 300px;
+	background-color: $gray-lighter;
+	margin: 2em 0;
+	border-radius: $border-radius;
+
+	.home & {
+		padding: 1em;
 	}
 }

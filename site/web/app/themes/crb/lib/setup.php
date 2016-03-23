@@ -33,7 +33,7 @@ function setup() {
     'se-deplacer' => __('Se déplacer', 'sage')
   ]);
   register_nav_menus([
-    'bgv' => __('Bretagne Grnage Vitesse', 'sage')
+    'bgv' => __('Bretagne Grande Vitesse', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -91,7 +91,8 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
-    is_page_template('template-custom.php'),
+    is_page_template('page-se-deplacer.php'),
+    is_page_template('page-bgv.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
