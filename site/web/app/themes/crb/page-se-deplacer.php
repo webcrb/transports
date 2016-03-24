@@ -4,17 +4,38 @@
  */
 ?>
 
-<nav class="section rubrique">
-	<div class="row">
-		<?php if (has_nav_menu('se-deplacer')) : ?>
-		<div class="col-md-offset-8 col-md-4 menu">
-			<?php wp_nav_menu(['theme_location' => 'se-deplacer', 'menu_class' => 'nav nav-stacked']); ?>
-		</div>
-		<?php endif; ?>
-	</div>
-</nav>
+<?php get_template_part('templates/menu', 'sedeplacer'); ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
+	<div class="row">
+		<div class="col-md-4">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aspernatur enim, accusantium quam sint quibusdam dignissimos, eius delectus amet fuga voluptas similique quasi necessitatibus iure dolore non ipsam illo facilis!</p>
+		</div>
+		<div class="col-md-4">
+			<p>Laboriosam a quas dolores sapiente repellendus ratione, harum explicabo nihil ea provident distinctio repellat, illo magnam cupiditate tenetur possimus sequi iste laborum nisi aliquid incidunt magni nobis numquam enim! Nobis.</p>
+		</div>
+		<div class="col-md-4">
+			<p>Atque neque, illo, consequatur, et quae laudantium accusamus ipsam asperiores impedit eveniet, excepturi nobis at. Dicta voluptas labore, aliquam. Sit saepe pariatur magni animi vel beatae itaque dolore minima laudantium.</p>
+		</div>
+		<div class="col-md-12">
+			<div class="section text-xs-center jumbotron">
+				<p class="lead">Inscrivez-vous pour recevoir les dernières informations</p>
+				<form action="" class="form-inline">
+					<div class="form-group">
+						<label for="" class="sr-only">email</label>
+						<input type="email" class="form-control" placeholder="votre email">
+					</div>
+					<button type="submit" class="btn btn-primary">S'inscrire</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<h2>Animations culturelles</h2>
+		<p><img src="https://unsplash.it/800/800?random" alt="" class="img-fluid"></p>	
+	</div>
+	<div class="col-md-8">
+		<h2>Breizhgo</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio vero, nemo et sequi at totam asperiores, dicta minima a pariatur nostrum, sed consequuntur! Iure maiores quaerat, aperiam numquam quos.</p>
+	</div>
 <?php endwhile; ?>

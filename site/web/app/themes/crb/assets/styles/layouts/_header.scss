@@ -10,5 +10,11 @@
 		a {
 			@extend .nav-link;
 		}
+
+		&.active {
+			a {
+				color: #fff;
+			}
+		}
 	}
 }

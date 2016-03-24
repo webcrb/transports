@@ -35,6 +35,9 @@ function setup() {
   register_nav_menus([
     'bgv' => __('Bretagne Grande Vitesse', 'sage')
   ]);
+  register_nav_menus([
+    'concertation' => __('Concertation', 'sage')
+  ]);
 
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
@@ -91,8 +94,7 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
-    is_page_template('page-se-deplacer.php'),
-    is_page_template('page-bgv.php')
+    is_page()
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -102,6 +104,7 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
+  wp_enqueue_style('crbicon', 'http://guidestyles.bretagne.bzh/styles/crbicon.css', false, null);
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
