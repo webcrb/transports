@@ -38,7 +38,7 @@ $actus = new WP_Query( array( 'posts_per_page' => 3 ) );
 	<?php wp_reset_postdata(); ?>
 <?php endif; ?>
 
-<div class="rubrique">
+<div class="rubrique rub1">
 	<h2>Se déplacer</h2>
 	<div class="row">
 		<div class="col-md-8">
@@ -52,7 +52,7 @@ $actus = new WP_Query( array( 'posts_per_page' => 3 ) );
 	</div>
 </div>
 
-<div class="rubrique">
+<div class="rubrique rub2">
 	<h2>Bretagne Grand Vitesse</h2>
 	<div class="row">
 		<?php if (has_nav_menu('bgv')) : ?>
@@ -63,5 +63,24 @@ $actus = new WP_Query( array( 'posts_per_page' => 3 ) );
 		<div class="col-md-8">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quos fuga, cumque cum eligendi odio magni soluta quis earum nam hic ut reprehenderit rem, animi porro sunt. Quae, vel, debitis!</p>
 		</div>
+	</div>
+</div>
+
+<div class="section text-xs-center jumbotron">
+	<p class="lead">Inscrivez-vous pour recevoir les dernières informations</p>
+	<form action="" class="form-inline">
+		<div class="form-group">
+			<label for="" class="sr-only">email</label>
+			<input type="email" class="form-control" placeholder="votre email">
+		</div>
+		<button type="submit" class="btn btn-primary">S'inscrire</button>
+	</form>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-md-4"><img src="https://unsplash.it/800/450" alt="vidéo" class="img-fluid"></div>
+		<div class="col-md-4"><img src="https://unsplash.it/801/450" alt="vidéo" class="img-fluid"></div>
+		<div class="col-md-4"><img src="https://unsplash.it/802/450" alt="vidéo" class="img-fluid"></div>
 	</div>
 </div>

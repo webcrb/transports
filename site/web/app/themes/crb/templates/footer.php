@@ -1,5 +1,10 @@
 <footer class="content-info">
   <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
+    <?php 
+    	if ( has_nav_menu( 'footer' ) ) {
+    		wp_nav_menu(['theme_location' => 'footer', 'menu_class' => 'nav nav-inline']);
+    	}
+    ?>
+
   </div>
 </footer>

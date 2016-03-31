@@ -26,7 +26,7 @@ function setup() {
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
-   register_nav_menus([
+  register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
   register_nav_menus([
@@ -37,6 +37,9 @@ function setup() {
   ]);
   register_nav_menus([
     'concertation' => __('Concertation', 'sage')
+  ]);
+  register_nav_menus([
+    'footer' => __('Pied de Page', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -111,6 +114,7 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script('vendor', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script('main', Assets\asset_path('scripts/vendor.js'), ['vendor'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

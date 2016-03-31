@@ -8,28 +8,38 @@
 .menu {
 	.menu-item {
 		@extend .nav-item;
-		border-bottom: solid 1px rgba(0,0,0,0.1);
+		
 		margin-top: 0 !important;
 
 		a {
 			display: block;
 			@extend .nav-link;
-			padding: 0.5em 0;
+			padding: 0.5em;
 			color: $body-color;
+			border-bottom: solid 1px rgba(255,255,255,0.4);
+			opacity: 0.8;
+			
 			&:hover, &:focus {
-				color: $brand-primary;
+				background: rgba(255,255,255,0.2);
+				opacity: 1;
 			}
+
 		}
 
 		&:last-child {
-			border-bottom: none;
+			a {
+				border-bottom: none;
+			}
+			
 		}
 
 		&.active {
 			background: $body-background;
+			color: $brand-primary;
 			a {
 				padding-left: 0.5em;
 				font-weight: bold;
+
 			}
 		}
 	}
@@ -37,9 +47,16 @@
 
 .rubrique {
 	min-height: 300px;
-	background-color: $gray-lighter;
+	background: $brand-primary;
+	background: radial-gradient(ellipse at center, lighten($brand-primary, 30%) 0%, lighten($brand-primary, 10%) 100%);
 	margin: 2em 0;
 	border-radius: $border-radius;
+
+	&.rub1 {
+		background: lighten($brand-info, 30%);
+		background: radial-gradient(ellipse at center, lighten($brand-info, 50%) 0%, lighten($brand-info, 30%) 100%);
+
+	}
 
 	.home & {
 		padding: 1em;

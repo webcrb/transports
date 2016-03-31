@@ -4,7 +4,7 @@
  */
 
 // the query
-$actus = new WP_Query( array( 'posts_per_page' => 3, 'tag' => 'bgv' ) );
+$actus = new WP_Query( array( 'posts_per_page' => 3, 'category_name' => 'bgv' ) );
 
 ?>
 

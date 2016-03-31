@@ -1,4 +1,4 @@
-<nav class="section rubrique">
+<nav class="section rubrique rub1">
 	<div class="row">
 		<?php if (has_nav_menu('se-deplacer')) : ?>
 		<div class="col-md-offset-8 col-md-4 menu">

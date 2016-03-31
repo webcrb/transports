@@ -17,18 +17,6 @@
 		<div class="col-md-4">
 			<p>Atque neque, illo, consequatur, et quae laudantium accusamus ipsam asperiores impedit eveniet, excepturi nobis at. Dicta voluptas labore, aliquam. Sit saepe pariatur magni animi vel beatae itaque dolore minima laudantium.</p>
 		</div>
-		<div class="col-md-12">
-			<div class="section text-xs-center jumbotron">
-				<p class="lead">Inscrivez-vous pour recevoir les dernières informations</p>
-				<form action="" class="form-inline">
-					<div class="form-group">
-						<label for="" class="sr-only">email</label>
-						<input type="email" class="form-control" placeholder="votre email">
-					</div>
-					<button type="submit" class="btn btn-primary">S'inscrire</button>
-				</form>
-			</div>
-		</div>
 	</div>
 	<div class="col-md-4">
 		<h2>Animations culturelles</h2>
