@@ -7,16 +7,14 @@
 $actus = new WP_Query( array( 'posts_per_page' => 3 ) );
 ?>
 
-<div class="section">
+
 <?php while (have_posts()) : the_post(); ?>
-  <h1><?php bloginfo('description'); ?></h1>
+  <!-- <h1><?php bloginfo('description'); ?></h1>
   <div class="row">
   	<div class="col-md-6"><?php get_template_part('templates/content', 'page'); ?></div>
-  </div>
+  </div> -->
   
 <?php endwhile; ?>
-<hr>
-</div>
 
 <?php if ( $actus->have_posts() ) : ?>
 	<!-- pagination here -->
@@ -55,10 +53,5 @@ $actus = new WP_Query( array( 'posts_per_page' => 3 ) );
 	</form>
 </div>
 
-<div class="section">
-	<div class="row">
-		<div class="col-md-4"><img src="https://unsplash.it/800/450" alt="vidéo" class="img-fluid"></div>
-		<div class="col-md-4"><img src="https://unsplash.it/801/450" alt="vidéo" class="img-fluid"></div>
-		<div class="col-md-4"><img src="https://unsplash.it/802/450" alt="vidéo" class="img-fluid"></div>
-	</div>
-</div>
+<?php get_template_part('templates/section', 'videos'); ?>
+

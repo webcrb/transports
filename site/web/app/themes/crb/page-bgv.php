@@ -52,15 +52,3 @@ $actus = new WP_Query( array( 'posts_per_page' => 3, 'category_name' => 'bgv' ) 
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 </div>
-
-<div class="row section">
-	<div class="col-md-4">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quidem rerum tempora doloribus libero atque, omnis aliquid perferendis enim, repudiandae accusantium dicta, distinctio cum repellat voluptates labore, assumenda. Voluptatum, accusantium.</p>
-	</div>
-	<div class="col-md-4">
-		<p>Necessitatibus at, obcaecati sit, est ea minima maiores error corporis dolore totam deleniti cum dolorem fugiat delectus adipisci eum similique deserunt autem ab. Voluptate possimus, vel sint ullam expedita commodi!</p>
-	</div>
-	<div class="col-md-4">
-		<p>A sequi quas fugiat doloribus quidem soluta architecto ipsum illo ipsa officiis nihil aut reiciendis unde optio eveniet temporibus doloremque facere impedit porro, quis at dignissimos vel consequuntur. Quis, sequi.</p>
-	</div>
-</div>

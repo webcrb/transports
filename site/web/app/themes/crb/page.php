@@ -28,10 +28,8 @@ $parent = new WP_Query( $args );
 	  <?php get_template_part('templates/page', 'header'); ?>
 	  <?php get_template_part('templates/content', 'page'); ?>
 	<?php endwhile; ?>
-	</div>
-</div>
 
-<?php if ( $parent->have_posts() ) : ?>
+	<?php if ( $parent->have_posts() ) : ?>
 	<div id="accordion" role="tablist" aria-multiselectable="true">
 
 	    <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
@@ -53,4 +51,9 @@ $parent = new WP_Query( $args );
 
 	</div> <!-- accordion -->
 
-<?php endif; wp_reset_query(); ?>
+	<?php endif; wp_reset_query(); ?>
+
+	</div>
+
+	<?php get_template_part('templates/section', 'videos'); ?>
+</div>
