@@ -43,7 +43,9 @@
     "wpackagist-plugin/types": "^1.8",
     "wpackagist-plugin/advanced-custom-fields": "^4.4",
     "wpackagist-plugin/wordpress-seo": "^3.1.1",
-    "wpackagist-plugin/knight-lab-timelinejs": "^3.3"
+    "wpackagist-plugin/knight-lab-timelinejs": "^3.3",
+    "wpackagist-plugin/ninja-forms": "^2.9",
+    "wpackagist-plugin/wysija-newsletters": "^2.7"
   },
   "extra": {
     "installer-paths": {

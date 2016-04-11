@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dd0d8d7a1edeb98b2fcb2e6d1562db3f",
-    "content-hash": "bebfe2be10666fb0d118c591e32a4610",
+    "hash": "f44dea5d8f98bd1b010aecea98941d17",
+    "content-hash": "c574562ff3fe030063bf11ae808b51bb",
     "packages": [
         {
             "name": "composer/installers",
@@ -423,6 +423,26 @@
             "homepage": "https://wordpress.org/plugins/knight-lab-timelinejs/"
         },
         {
+            "name": "wpackagist-plugin/ninja-forms",
+            "version": "2.9.38",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ninja-forms/",
+                "reference": "tags/2.9.38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.2.9.38.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ninja-forms/"
+        },
+        {
             "name": "wpackagist-plugin/types",
             "version": "1.9.1",
             "source": {
@@ -461,6 +481,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wysija-newsletters",
+            "version": "2.7.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wysija-newsletters/",
+                "reference": "tags/2.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wysija-newsletters.2.7.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wysija-newsletters/"
         }
     ],
     "packages-dev": [],

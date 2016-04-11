@@ -1,3 +1,13 @@
+.banner {
+	&:after {
+		content: '';
+		display: block;
+		@include make-container();
+  		@include make-container-max-widths(); 
+		height: 30px;
+		background: url(../images/zebra.png) 10px 0 no-repeat;
+	}
+}
 .topbar {
 	background: $gray-lighter;
 	font-size: 0.9em;
