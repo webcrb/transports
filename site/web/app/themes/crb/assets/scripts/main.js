@@ -34,9 +34,12 @@
       }
     },
     // About us page, note the change from about-us to about_us.
-    'about_us': {
+    'page_template_page_sedeplacer': {
       init: function() {
         // JavaScript to be fired on the about us page
+        // use code below to specify ID ('redirect' by default)
+        CanalTP.MB.containerId = "breizhgo";
+        CanalTP.buildMB(CanalTP.MB);
       }
     }
   };

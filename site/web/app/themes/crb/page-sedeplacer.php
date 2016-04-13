@@ -23,10 +23,14 @@
 			<?php the_field('animations_culturelles'); ?>
 		</div>
 		<?php endif; ?>
-	<div class="col-md-8">
-		<h2>Breizhgo</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio vero, nemo et sequi at totam asperiores, dicta minima a pariatur nostrum, sed consequuntur! Iure maiores quaerat, aperiam numquam quos.</p>
-	</div>
+		<div class="col-md-8">
+			<h2>Breizhgo</h2>
+			<div id="breizhgo">
+			    <noscript>
+			        <iframe src="http://nmp-ihm.ctp.prod.canaltp.fr/fr/load/cRqCgvoO" style="width:100%; height:600px;"/>
+			    </noscript>
+			</div>
+		</div>
 	</div>
 	
 <?php endwhile; ?>

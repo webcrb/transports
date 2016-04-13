@@ -114,7 +114,14 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('vendor', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
-  wp_enqueue_script('main', Assets\asset_path('scripts/vendor.js'), ['vendor'], null, true);
+  wp_register_script('vendor', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_register_script('main', Assets\asset_path('scripts/vendor.js'), ['vendor'], null, true);
+  wp_register_script('canaltp', 'http://nmp-ihm.ctp.prod.canaltp.fr/fr/load/cRqCgvoO/script', [], null, true);
+
+  wp_enqueue_script('main');
+
+  if ( is_page_template( 'page-sedeplacer.php' ) ) {
+    wp_enqueue_script('canaltp');
+  }
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
