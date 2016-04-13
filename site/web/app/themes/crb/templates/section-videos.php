@@ -15,7 +15,6 @@ if( $videos ): ?>
 	            </p>
 	            <h2 class="h4"><?php the_title(); ?></h2>
 	            <p><?php the_excerpt(); ?></p>
-	            <hr>
 	        </div>
 	    <?php endforeach; ?>
 		</div>
@@ -32,7 +31,6 @@ if( $videos ): ?>
 	            </p>
 	            <h2 class="h4"><?php the_title(); ?></h2>
 	            <p><?php the_excerpt(); ?></p>
-	            <hr>
 	        </aside>
 	    <?php endforeach; ?>
 	</div>

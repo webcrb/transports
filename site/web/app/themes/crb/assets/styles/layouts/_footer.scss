@@ -1,14 +1,11 @@
 .content-info {
 	padding-bottom: 200px;
 	background: url(../images/footer.jpg) no-repeat center bottom;
+	.menu-item {
+		@extend .nav-item;
 
-	.nav {
-		.menu-item {
-			@extend .nav-item;
-
-			a {
-				@extend .nav-link;
-			}
+		a {
+			@extend .nav-link;
 		}
 	}
 }
