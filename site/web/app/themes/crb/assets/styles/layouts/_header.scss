@@ -9,11 +9,28 @@
 	}
 }
 .topbar {
-	background: $gray-lighter;
+	background: $gray-lightest;
 	font-size: 0.9em;
 	padding: 0.2em 0;
+	position: relative;
+	z-index: 200;
+	a {
+		color: $body-color;
+	}
 }
+.navbar {
+	position: relative;
+	z-index: 20;
+}
+
+.rb {
+    padding-left: 50px;
+    background: url(../images/navbar-logo.png) left center no-repeat;
+    background-size: 40px;
+}
+
 .navbar-nav {
+
 	.menu-item {
 		@extend .nav-item;
 		
