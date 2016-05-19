@@ -5,7 +5,6 @@
 	padding: 2em 0;
 }
 
-
 .btn, input {
 	border-radius: 0;
 }
@@ -104,7 +103,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			background: url(../images/TER.png) left bottom no-repeat;
+			//background: url(../images/TER.png) left bottom no-repeat;
 		}
 
 	}
@@ -118,7 +117,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			background: url(../images/TGV.png) right bottom no-repeat;
+			//background: url(../images/TGV.png) right bottom no-repeat;
 		}
 
 	}
@@ -138,9 +137,24 @@
 	}
 }
 
-.contenu img {
-	@extend .img-fluid;
-	@extend .img-thumbnail;
+.contenu {
+	img {
+		@extend .img-fluid;
+		@extend .img-thumbnail;
+	} 
+
+	a {
+		color: darken($brand-primary, 15%);
+		display: inline-block;
+		border-bottom: dotted 1px $brand-primary;
+		padding: 0.1em 0;
+
+		&:hover, &:focus {
+			color: darken($brand-primary, 25%);
+			text-decoration: none;
+			border-bottom-style: solid;
+		}
+	}
 }
 
 blockquote {

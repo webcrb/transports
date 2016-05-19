@@ -20,23 +20,36 @@
         
       </div>
   </div>
-    <nav class="navbar navbar-dark bg-inverse navbar-full">
-      <div class="container">
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="navigation">
-          &#9776;
-        </button>
-        <div class="collapse navbar-toggleable-xs" id="navigation">
-          <a class="navbar-brand rb" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-          <?php
-            if (has_nav_menu('primary_navigation')) :
-              wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
-            endif;
-          ?>
-          <form class="form-inline pull-xs-right">
-            <input class="form-control" type="text" placeholder="Rechercher">
-            <button class="btn btn-secondary sr-only" type="submit">Rechercher</button>
-          </form>
-        </div>
+  <nav class="navbar navbar-full menu-bzh hidden-md-down">
+    <div class="container">
+
+        <a class="navbar-brand rb" href="http://www.bretagne.bzh">sur bretagne.bzh</a>
+        <?php
+          if (has_nav_menu('bzh_navigation')) :
+            wp_nav_menu(['theme_location' => 'bzh_navigation', 'menu_class' => 'nav navbar-nav']);
+          endif;
+        ?>
+    </div>
+  </nav>
+  <nav class="navbar navbar-dark bg-inverse navbar-full">
+    <div class="container">
+      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="navigation">
+        &#9776;
+      </button>
+      <div class="collapse navbar-toggleable-xs" id="navigation">
+        <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+        <?php
+          if (has_nav_menu('primary_navigation')) :
+            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
+          endif;
+        ?>
+        <form role="search" class="form-inline pull-xs-right" id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <label for="s" class="sr-only">Search:</label>  
+          <input class="form-control" type="text" placeholder="Rechercher" name="s" id="s" value="<?php echo get_search_query(); ?>">
+          <button class="btn btn-secondary sr-only" type="submit">Rechercher</button>
+        </form>
       </div>
-    </nav>
+    </div>
+  </nav>
+
 </header>

@@ -1,12 +1,22 @@
 .banner {
-	&:after {
-		content: '';
-		display: block;
-		@include make-container();
-  		@include make-container-max-widths(); 
-		height: 30px;
-		background: url(../images/zebra.png) 10px 0 no-repeat;
+	
+	margin-bottom: 1em;
+
+	.home & {
+		&:after {
+			content: '';
+			display: block;
+			//@include make-container();
+	  		//@include make-container-max-widths(); 
+			height: 70vh;
+			background-image: url(../images/bg-header.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
 	}
+
 }
 .topbar {
 	background: $gray-lightest;
@@ -43,5 +53,11 @@
 				color: #fff;
 			}
 		}
+	}
+}
+
+.menu-bzh {
+	a {
+		color: $body-color;
 	}
 }

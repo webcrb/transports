@@ -114,4 +114,14 @@ add_filter( 'show_admin_bar' , __NAMESPACE__ . '\\my_function_admin_bar');
 function add_excerpt_pages() {
 add_meta_box('postexcerpt', __('Extrait'), 'post_excerpt_meta_box', 'page', 'normal', 'core');
 }
-add_action( 'admin_menu', __NAMESPACE__ . '\add_excerpt_pages' );
+add_action( 'admin_menu', __NAMESPACE__ . '\\add_excerpt_pages' );
+
+
+// search filter
+function fb_search_filter($query) {
+if ( !$query->is_admin && $query->is_search) {
+$query->set('post_type', array('page','post') ); // id of page or post
+}
+return $query;
+}
+add_filter( 'pre_get_posts', __NAMESPACE__ . '\\fb_search_filter' );

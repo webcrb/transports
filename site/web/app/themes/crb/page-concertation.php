@@ -23,18 +23,7 @@
 
 	<?php endif; ?>
 
-<aside class="section">
-	<div class="text-xs-center jumbotron">
-		<p class="lead">Inscrivez-vous pour recevoir les dernières informations</p>
-		<form action="" class="form-inline">
-			<div class="form-group">
-				<label for="" class="sr-only">email</label>
-				<input type="email" class="form-control" placeholder="votre email">
-			</div>
-			<button type="submit" class="btn btn-primary">S'inscrire</button>
-		</form>
-	</div>
-</aside>
+<?php get_template_part('templates/inscription', 'newsletter'); ?>
 
 
 <?php endwhile; ?>

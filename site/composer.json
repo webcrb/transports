@@ -36,17 +36,17 @@
     "php": ">=5.5",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.4.2",
+    "johnpbloch/wordpress": "^4",
     "oscarotero/env": "^1.0",
-    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/wp-password-bcrypt": "^1.0",
     "roots/soil": "^3.6",
-    "wpackagist-plugin/types": "^1.8",
+    "wpackagist-plugin/types": "^2",
     "wpackagist-plugin/advanced-custom-fields": "^4.4",
-    "wpackagist-plugin/wordpress-seo": "^3.1.1",
-    "wpackagist-plugin/knight-lab-timelinejs": "^3.3",
-    "wpackagist-plugin/ninja-forms": "^2.9",
-    "wpackagist-plugin/wysija-newsletters": "^2.7",
-    "wpackagist-plugin/responsive-lightbox": "^1.6"
+    "wpackagist-plugin/wordpress-seo": "^3",
+    "wpackagist-plugin/knight-lab-timelinejs": "^3",
+    "wpackagist-plugin/ninja-forms": "^2",
+    "wpackagist-plugin/wysija-newsletters": "^2",
+    "wpackagist-plugin/responsive-lightbox": "^1"
   },
   "extra": {
     "installer-paths": {

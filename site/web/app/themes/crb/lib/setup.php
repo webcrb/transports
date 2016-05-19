@@ -15,6 +15,7 @@ function setup() {
   add_theme_support('soil-nice-search');
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
+  add_theme_support('soil-google-analytics', 'UA-6646384-7', 'wp_head'); // script will load during wp_head
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -26,6 +27,9 @@ function setup() {
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
+  register_nav_menus([
+    'bzh_navigation' => __('Navigation bretagne.bzh', 'sage')
+  ]);
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);

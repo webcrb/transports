@@ -35,17 +35,7 @@ $actus = new WP_Query( array( 'posts_per_page' => 3, 'category_name' => 'bgv' ) 
 	<?php wp_reset_postdata(); ?>
 <?php endif; ?>
 
-<div class="section text-xs-center jumbotron">
-	<p class="lead">Inscrivez-vous pour recevoir les dernières informations</p>
-	<form action="" class="form-inline">
-		<div class="form-group">
-			<label for="" class="sr-only">email</label>
-			<input type="email" class="form-control" placeholder="votre email">
-		</div>
-		<button type="submit" class="btn btn-primary">S'inscrire</button>
-	</form>
-</div>
-
+<?php get_template_part('templates/inscription', 'newsletter'); ?>
 
 <div class="section">
   <?php //get_template_part('templates/page', 'header'); ?>

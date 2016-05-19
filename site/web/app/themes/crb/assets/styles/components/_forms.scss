@@ -13,3 +13,8 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+.widget_wysija_cont .wysija-submit {
+    display: inline!important;
+    margin-top: 0!important;
+}
