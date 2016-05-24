@@ -8,8 +8,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~4",
-    "tether": "~1.1.1"
+    "tether": "~1.1.1",
+    "include-media": "~1.4.4"
   },
-  "overrides": {
-  }
+  "overrides": {}
 }

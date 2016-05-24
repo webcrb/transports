@@ -1,3 +1,5 @@
+$breakpoints: $grid-breakpoints;
+
 .wrap {
 	min-height: 80vh;
 }
@@ -14,28 +16,33 @@
 	position: relative;
 	background: #f0f1f2;
 
-	&:before {
-		content: '';
-		display: block;
-		width: 230px;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		background: url(../images/5bandes.png) left center no-repeat;
+	@include media('>xl') {
+
+		&:before {
+			content: '';
+			display: block;
+			width: 230px;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(../images/5bandes.png) left center no-repeat;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			width: 230px;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: url(../images/5bandes.png) left center no-repeat;
+			transform: rotate(180deg);
+		}
+
 	}
 
-	&:after {
-		content: '';
-		display: block;
-		width: 230px;
-		height: 100%;
-		position: absolute;
-		right: 0;
-		top: 0;
-		background: url(../images/5bandes.png) left center no-repeat;
-		transform: rotate(180deg);
-	}
 }
 
 .menu {
@@ -79,7 +86,6 @@
 }
 
 .rubrique {
-	min-height: 300px;
 	background: $brand-primary;
 	background: radial-gradient(ellipse at center, lighten($brand-primary, 30%) 0%, lighten($brand-primary, 10%) 100%);
 	margin: 2em 0;
@@ -87,51 +93,59 @@
 	border-radius: $border-radius;
 	position: relative;
 
-	.col-md-8 {
-		padding-bottom: 200px;
-	}
-
 	&.se-deplacer {
 		background-color: lighten($brand-info, 30%);
 		background-image: radial-gradient(ellipse at center, lighten($brand-info, 50%) 0%, lighten($brand-info, 30%) 100%);
-		
-		&:before {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 300px;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background: url(../images/TER.png) left bottom no-repeat;
+	}
+	
+	@include media('>lg') {
+		min-height: 300px;
+
+		.col-lg-8 {
+			padding-bottom: 200px;
 		}
 
-	}
+		&.se-deplacer {
+			
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 300px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(../images/TER.png) left bottom no-repeat;
+			}
 
-	&.bgv {
-		&:before {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 300px;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background: url(../images/TGV.png) right bottom no-repeat;
 		}
 
-	}
+		&.bgv {
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 300px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(../images/TGV.png) right bottom no-repeat;
+			}
 
-	&.concertation {
-		&:before {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 300px;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background: url(../images/porte_voix.png) left bottom no-repeat;
+		}
+
+		&.concertation {
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 300px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(../images/porte_voix.png) left bottom no-repeat;
+			}
+
 		}
 
 	}

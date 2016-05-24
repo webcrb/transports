@@ -25,7 +25,7 @@
 
 .navbar-nav {
 
-	.menu-item {
+	li {
 		@extend .nav-item;
 		
 		a {
@@ -36,6 +36,11 @@
 			a {
 				color: #fff;
 			}
+		}
+
+		@include media('<md') {
+			float: none;
+			margin-left: 1em;
 		}
 	}
 }

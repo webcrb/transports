@@ -10,7 +10,7 @@ if ( $sedeplacer_query->have_posts() ) : ?>
 		<!-- the loop -->
 		<?php while ( $sedeplacer_query->have_posts() ) : $sedeplacer_query->the_post(); ?>
 
-			<div class="col-md-8">
+			<div class="col-lg-8">
 				<h2><?php the_title(); ?></h2>
 				<?php the_excerpt(); ?>
 			</div>
@@ -21,7 +21,7 @@ if ( $sedeplacer_query->have_posts() ) : ?>
 		<!-- pagination here -->
 		<?php if (has_nav_menu('concertation')) : ?>
 
-			<div class="col-md-4 menu">
+			<div class="col-lg-4 menu">
 				<?php wp_nav_menu(['theme_location' => 'concertation', 'menu_class' => 'nav nav-stacked']); ?>
 			</div>
 			

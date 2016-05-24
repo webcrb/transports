@@ -7,23 +7,24 @@ if ( $bgv_query->have_posts() ) : ?>
 	<nav class="section rubrique bgv">
 		<div class="row">
 
-			<?php if (has_nav_menu('bgv')) : ?>
-
-				<div class="col-md-4 menu">
-					<?php wp_nav_menu(['theme_location' => 'bgv', 'menu_class' => 'nav nav-stacked']); ?>
-				</div>
-				
-			<?php endif; ?>
 
 			<!-- the loop -->
 			<?php while ( $bgv_query->have_posts() ) : $bgv_query->the_post(); ?>
 
-				<div class="col-md-8">
+				<div class="col-lg-8 col-lg-push-4">
 					<h2><?php the_title(); ?></h2>
 					<?php the_excerpt(); ?>
 				</div>
 				
 			<?php endwhile; ?>
+			
+			<?php if (has_nav_menu('bgv')) : ?>
+
+				<div class="col-lg-4 col-lg-pull-8 menu">
+					<?php wp_nav_menu(['theme_location' => 'bgv', 'menu_class' => 'nav nav-stacked']); ?>
+				</div>
+				
+			<?php endif; ?>
 			<!-- end of the loop -->
 
 			<!-- pagination here -->

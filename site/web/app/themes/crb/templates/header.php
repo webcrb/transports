@@ -38,19 +38,19 @@
         ?>
     </div>
   </nav>
-  <nav class="navbar navbar-dark bg-inverse navbar-full">
+  <nav class="navbar navbar-dark bg-inverse navbar-full navbar-fixed-top">
     <div class="container">
-      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="navigation">
+      <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navigation-principale">
         &#9776;
       </button>
-      <div class="collapse navbar-toggleable-xs" id="navigation">
-        <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <div class="collapse navbar-toggleable-sm" id="navigation-principale">
+        <a class="navbar-brand hidden-md-down" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
         <?php
           if (has_nav_menu('primary_navigation')) :
             wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
           endif;
         ?>
-        <form role="search" class="form-inline pull-xs-right" id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <form role="search" class="form-inline pull-md-right" id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
         <label for="s" class="sr-only">Search:</label>  
           <input class="form-control" type="text" placeholder="Rechercher" name="s" id="s" value="<?php echo get_search_query(); ?>">
           <button class="btn btn-secondary sr-only" type="submit">Rechercher</button>
