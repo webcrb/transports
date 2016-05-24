@@ -103,7 +103,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			//background: url(../images/TER.png) left bottom no-repeat;
+			background: url(../images/TER.png) left bottom no-repeat;
 		}
 
 	}
@@ -117,7 +117,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			//background: url(../images/TGV.png) right bottom no-repeat;
+			background: url(../images/TGV.png) right bottom no-repeat;
 		}
 
 	}
@@ -139,9 +139,12 @@
 
 .contenu {
 	img {
-		@extend .img-fluid;
-		@extend .img-thumbnail;
-	} 
+		&:not(.alignleft) {
+			@extend .img-fluid;
+			@extend .img-thumbnail;
+		}
+	}
+	
 
 	a {
 		color: darken($brand-primary, 15%);
@@ -154,6 +157,11 @@
 			text-decoration: none;
 			border-bottom-style: solid;
 		}
+
+		&[rel="lightbox"] {
+			display: inline;
+			border: none;
+		}
 	}
 }
 
@@ -162,4 +170,47 @@ blockquote {
 	padding-left: 1em;
 	font-style: italic;
 	font-size: 1.2em;
+}
+
+.panel-title {
+	a {
+		display: block;
+		padding: 0.5em;
+		background: $gray-lighter;
+		color: $gray-dark;
+		font-size: 1.5rem;
+		position: relative;
+
+		&:after {
+			content: '\27A4';
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 0.5em;
+			color: $brand-secondary;
+			transition: transform 0.2s ease;
+		}
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+
+		&:hover, &:focus, &:not(.collapsed) {
+			text-decoration: none;
+			background: $brand-secondary;
+			color: #fff;
+			&:after {
+				color: #fff;
+			}
+		}
+
+		&:not(.collapsed) {
+			
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+
+	}
 }

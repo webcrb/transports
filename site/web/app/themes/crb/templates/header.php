@@ -1,3 +1,10 @@
+<?php 
+  $banner = false;
+  if (is_front_page()) {
+    $banner = get_field('banner', 4);
+  }  
+?>
+
 <header class="banner">
   <div class="topbar">
       <div class="container">
@@ -51,5 +58,7 @@
       </div>
     </div>
   </nav>
-
+  <?php if ($banner) : ?>
+    <h1 class="text-sm-center"><img src="<?php echo $banner; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid bannerimg"></h1>
+  <?php endif; ?>
 </header>

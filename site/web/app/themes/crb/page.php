@@ -37,7 +37,9 @@ $parent = new WP_Query( $args );
 	        <div id="parent-<?php the_ID(); ?>" class="parent-page panel panel-default">
 	        	<div class="panel-heading" role="tab" id="heading-<?php the_ID(); ?>">
 
-	            	<h2 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="page-<?php the_ID(); ?>" href="#page-<?php the_ID(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+	            	<h2 class="panel-title">
+	            		<a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="page-<?php the_ID(); ?>" href="#page-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="collapsed"><?php the_title(); ?></a>
+					</h2>
 
 	            </div>
 

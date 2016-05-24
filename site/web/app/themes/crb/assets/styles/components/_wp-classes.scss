@@ -15,8 +15,14 @@
 }
 .alignleft,
 .alignright {
+
   margin-bottom: ($spacer / 2);
   height: auto;
+}
+
+.alignleft {
+    float: left;
+    margin-right: $spacer;
 }
 
 // Captions
@@ -24,7 +30,9 @@
   @extend .thumbnail;
 }
 .wp-caption-text {
-  padding: $spacer;
+  padding-top: ($spacer / 2);
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 // Text meant only for screen readers
