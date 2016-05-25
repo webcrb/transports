@@ -2,9 +2,13 @@
 .main {
 	@include make-col();
   	@include make-col-span($main-sm-columns);
-  .sidebar-primary & {
-    @include make-col-span($main-sm-columns - $sidebar-sm-columns);
-  }
+  	
+  	@include media('>md') {
+  		 .sidebar-primary & {
+		    @include make-col-span($main-sm-columns - $sidebar-sm-columns);
+		  }
+  	}
+ 
 }
 .sidebar {
 	@include make-col();
